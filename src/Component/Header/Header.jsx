@@ -8,10 +8,11 @@ import Button from '../Button/Button'
 export default function Header() {
   
   return (
-    <div className='header_main_div'>
+    <header className='header_main_div'>
       <div className='header_main_inner_div'>
         <div className='header_left_div'>
           <img src="./mainLogo.png" alt=""  className='main_Logo'/>
+          
           <button className='menu_toggle'>☰</button>
         </div>
         <div className='header_middle_div'>
@@ -24,6 +25,6 @@ export default function Header() {
           </Button>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
