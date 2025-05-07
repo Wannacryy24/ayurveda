@@ -11,7 +11,7 @@ export default function Header() {
     <header className='header_main_div'>
       <div className='header_main_inner_div'>
         <div className='header_left_div'>
-          <img src="./mainLogo.png" alt=""  className='main_Logo'/>
+          <img src="./vv.png" alt=""  className='main_Logo'/>
           
           <button className='menu_toggle'>☰</button>
         </div>
@@ -21,7 +21,7 @@ export default function Header() {
         <div className='header_right_div'>
           <Button className='header_btn_call'>
             <img src='./phone.png' alt="" className='call_btn_header'/>
-            <span>+91 1234567890 </span>
+            <span>+91 9410909079 </span>
           </Button>
         </div>
       </div>

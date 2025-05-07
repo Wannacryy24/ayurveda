@@ -10,7 +10,7 @@ export default function Carrousal() {
 
   return (
     <div ref={sliderRef} className="keen-slider"> 
-      <div className="keen-slider__slide number-slide1">Carrousal</div>
+      <div className="keen-slider__slide number-slide1"><img src="./1.png" alt="" /></div>
       <div className="keen-slider__slide number-slide2">2</div>
       <div className="keen-slider__slide number-slide3">3</div>
       <div className="keen-slider__slide number-slide4">4</div>
