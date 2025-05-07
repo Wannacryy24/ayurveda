@@ -16,9 +16,9 @@ export default function Footer() {
             </div>
             <div className='footer_right_div'>
                 <h3>Contact Info</h3>
-                <p>📞 +91 1234567890 </p>
-                <p>✉️ hello@ayurveda.com </p>
-                <p>🏠 Delhi, India    </p>
+                <p>📞 +91 9410909079 </p>
+                <p>✉️  veerveda10125@gmail.com</p>
+                <p>🏠 Anmol Vihar Paper mill road saharanpur 247001 UP</p>
             </div>
     </footer>
   )

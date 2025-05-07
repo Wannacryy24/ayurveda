@@ -1,4 +1,5 @@
 footer{
+    border-top: 1px solid green;
     background-color: #DFD1BA;
     width: 100%;
     display: flex;
