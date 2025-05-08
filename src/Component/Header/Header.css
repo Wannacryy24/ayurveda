@@ -2,6 +2,7 @@
     height: 30px;
 }
 
+
 .header_main_div{
     box-sizing: border-box;
     position: fixed;
@@ -22,6 +23,8 @@
     text-align: center;
     border-radius: 6rem;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #dfd1ba4b;
 }
 
 .menu_toggle{
