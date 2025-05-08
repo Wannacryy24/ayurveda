@@ -2,7 +2,7 @@ import React from 'react'
 import './about.css'
 import TabComponentAbout from '../../Component/TabComponentAbout/TabComponentAbout'
 
-import { aboutData } from './about'
+import { aboutData } from './about_Data'
 
 
 export default function About() {
