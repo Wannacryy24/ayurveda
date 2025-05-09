@@ -1,10 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export default function Image({src, className}) {
-  return (
-    <img 
-        src={src} alt="" 
-        className={className}
-    />
-  )
+export default function Image({ src, className }) {
+  return <img src={src} alt="" className={className} />;
 }

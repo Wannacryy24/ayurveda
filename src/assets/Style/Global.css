@@ -1,24 +1,23 @@
 :root {
-    --herbal: #6B8E23;
-    --brown: #4B2E2E;
-    --sand: #F5F5DC;
-    --white: #FAFAFA;
-    --accent: #FFD700;
+  --herbal: #6b8e23;
+  --brown: #4b2e2e;
+  --sand: #f5f5dc;
+  --white: #fafafa;
+  --accent: #ffd700;
 }
 
-*{
-    box-sizing: border-box;
-    margin:0px;
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'lato';
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'lato';
 }
 
-body{
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    /* background-color: #DFD1BA; */
-  }
-  
+body {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #DFD1BA; */
+}
