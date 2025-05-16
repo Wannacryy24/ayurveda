@@ -1,31 +1,114 @@
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 8rem;
+  height: 60vh;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: black;
+}
+
+/* ✅ Responsive styles for mobile */
+@media (max-width: 768px) {
+  .carousel {
+    height: 40vh;
+    margin-top: 4rem;
   }
-  .keen-slider{
-    margin-top: 10rem;
+
+  .carousel-button {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
   }
-  
-  [class^="number-slide"],
-  [class*=" number-slide"] {
-    background: grey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    color: #fff;
-    font-weight: 500;
-    height: 300px;
-    max-height: 100vh;
+
+  .carousel-dots {
+    bottom: 10px;
+    gap: 6px;
   }
-  
-  .number-slide1 {
-    background: rgb(64, 175, 255);
-    background: linear-gradient(
-      128deg,
-      rgba(64, 175, 255, 1) 0%,
-      rgba(63, 97, 255, 1) 100%
-    );
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
   }
-  
-  
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    margin-top: 20vh;
+    height: 35vh;
+  }
+
+  .carousel-button {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .carousel-dots {
+    bottom: 8px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+}

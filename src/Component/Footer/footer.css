@@ -1,42 +1,82 @@
-footer{
-    border-top: 1px solid green;
-    background-color: #DFD1BA;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2.5rem 2.5rem 2.5rem;
+footer {
+  border-top: 1px solid green;
+  background-color: #dfd1ba;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem 2.5rem 2.5rem;
 }
-.footer_left_div h3, .footer_middle_div h3, .footer_right_div h3{
-    margin-bottom: 1rem;
+.footer_left_div h3,
+.footer_middle_div h3,
+.footer_right_div h3 {
+  margin-bottom: 1rem;
 }
 
-footer div{
-    width: 30%;
+footer div {
+  width: 30%;
 }
 
 footer div p {
-    line-height: 1.4rem;
+  line-height: 1.4rem;
 }
 
-.footer_left_div{
-    display: flex;
+.footer_left_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 0px 20px;
+  line-height: 1.3rem;
+}
+
+.footer_left_div p {
+  text-align: center;
+}
+
+.footer_middle_div,
+.footer_right_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_left_div h3,
+.footer_middle_div h3,
+.footer_right_div h3 {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  footer {
     flex-direction: column;
-    align-items: center;
-    width: 30%;
-    padding: 0px 20px;
-    line-height: 1.3rem;
-}
-
-.footer_left_div p{
+    padding: 2rem 1rem;
+    gap: 2rem;
     text-align: center;
-}
+  }
 
-.footer_middle_div, .footer_right_div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.footer_left_div h3,.footer_middle_div h3, .footer_right_div h3{
-    font-size: 2rem;
+  footer div {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .footer_middle_div img {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .footer_left_div h3,
+  .footer_middle_div h3,
+  .footer_right_div h3 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+  }
+  .footer_left_div {
+    width: 80%;
+  }
+
+  footer div p {
+    font-size: large;
+    line-height: 2rem;
+  }
 }

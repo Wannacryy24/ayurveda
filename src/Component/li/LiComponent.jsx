@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
 
-export default function LiComponent({headerList=[]}) {
+export default function LiComponent({ headerList = [] }) {
   return (
-    <ul>{
-        headerList.map((item)=><li key={item}>{item}</li>)
-    }</ul>
-  )
+    <ul>
+      {headerList.map((item) => (
+        <li key={item} className={`li_${item}`}>
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
 }
