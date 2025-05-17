@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from './Component/Header/Header';
 import './assets/Style/Global.css';
@@ -6,6 +7,7 @@ import Footer from './Component/Footer/Footer';
 import Hero from './Component/Hero/Hero';
 import About from './Sections/About/About';
 import { imageData } from './Component/Carrousal/image';
+import ContactForm from './Component/AyurvedaContactForm/ContactForm';
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
       <Carrousal slides={imageData}/>
       <Hero />
       <About />
+      <ContactForm/>
       <Footer />
     </>
   );

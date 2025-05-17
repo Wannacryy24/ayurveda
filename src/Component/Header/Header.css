@@ -95,6 +95,60 @@
   gap: 0.5rem;
 }
 
+
+.header-icon-div {
+  margin-left: 20vw;
+  display: flex;
+  gap: 1vh;
+}
+
+.header-icon-div svg {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.instagram-wrapper {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.svg-insta,
+.svg-insta-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+
+.svg-insta-hover {
+  display: none;
+}
+
+.instagram-wrapper:hover .svg-insta {
+  display: none;
+}
+
+.instagram-wrapper:hover .svg-insta-hover {
+  display: block;
+}
+
+.header-icon-div svg:hover,
+.instagram-wrapper:hover svg {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+
+.header-icon-div svg:nth-child(1):hover {
+  fill: #4051B5;
+}
+
+.instagram-wrapper:hover svg {
+  transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
   .header_middle_div {
     position: absolute;
