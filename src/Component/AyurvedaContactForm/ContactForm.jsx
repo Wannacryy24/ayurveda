@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './contactForm.css'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('');
@@ -35,11 +36,12 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className=''>
-        <h2>Contact Us - Ayurveda Inquiry</h2>
+      <div className='contact_form_div'>
+        <h1>Contact Us</h1>
+        <p>Our team would love to hear from you! </p>
         <form onSubmit={handleSubmit}>
 
-          <div>
+          <div className='form_name_div'>
             <label>Name: </label>
             <input type="text" name="name" required placeholder='Enter Name'/>
           </div>
@@ -55,24 +57,11 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label>Subject: </label>
-            <input type="text" name="Subject" placeholder='Please Fill Required Subject' required/>
-          </div>
-
-          <div>
             <label>Message</label>
             <textarea name="Message" placeholder='Message...' required></textarea>
           </div>
-          <div>
-            <label>
-              <input type="checkbox" name="newsletter" value="yes" />
-              Subscribe to our newsletter
-            </label>
-          </div>
-
           <button type="submit">Submit</button>
         </form>
-
         <p>{status}</p>
       </div>
     </>

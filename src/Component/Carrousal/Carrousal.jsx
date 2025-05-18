@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Cstyles.css'
 const Carousel = ({ slides, autoSlide = true, autoSlideInterval = 3000 }) => {
-  console.log(slides);
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () =>

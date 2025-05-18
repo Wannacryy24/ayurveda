@@ -1,0 +1,134 @@
+.contact_form_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_form_div h1{
+    text-decoration:underline;
+    padding-bottom: 10px;
+}
+
+
+/* Base styling */
+.contact_form_div {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.contact_form_div h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact_form_div p {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+form > div {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 30vw;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #357ABD;
+}
+
+.status-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+/* Optional: Responsive tweaks */
+@media (max-width: 640px) {
+  .contact_form_div {
+    padding: 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+  }
+
+  form > div {
+    width: 100%;
+  }
+
+  .contact_form_div {
+    padding: 1.5rem;
+  }
+  .contact_form_div h1{
+    font-size: xx-large;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_form_div h1 {
+    font-size: 1.5rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+  .contact_form_div h1{
+    font-size: xx-large;
+  }
+}
