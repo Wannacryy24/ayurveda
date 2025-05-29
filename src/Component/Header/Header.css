@@ -1,3 +1,11 @@
+.mobile_view_only {
+  display: none;
+}
+
+.web_only_view {
+  display: block;
+}
+
 .header_logo {
   height: 30px;
 }
@@ -24,7 +32,6 @@
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #dfd1badf;
-  /* background-color: rgba(255, 255, 255,.6);     */
 }
 
 .menu_toggle {
@@ -73,12 +80,14 @@
 .call_btn_header {
   height: 18px;
 }
+
 .toggle_theme_btn {
   background-color: transparent;
-  border: 0px;
+  border: none;
   height: 2rem;
   width: 2rem;
 }
+
 .toggle_theme_btn img {
   height: 100%;
   width: 100%;
@@ -95,7 +104,66 @@
   gap: 0.5rem;
 }
 
+.header-icon-div {
+  display: flex;
+  gap: 1vh;
+}
+
+.header-icon-div svg {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.instagram-wrapper {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.svg-insta,
+.svg-insta-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+
+.svg-insta-hover {
+  display: none;
+}
+
+.instagram-wrapper:hover .svg-insta {
+  display: none;
+}
+
+.instagram-wrapper:hover .svg-insta-hover {
+  display: block;
+}
+
+.header-icon-div svg:hover,
+.instagram-wrapper:hover svg {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.header-icon-div svg:nth-child(1):hover {
+  fill: #4051B5;
+}
+
+.header_right_div {
+  width: 25vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .header_main_div {
+    padding: 0.5rem;
+  }
+
   .header_middle_div {
     position: absolute;
     right: 0px;
@@ -103,109 +171,138 @@
     height: 80vh;
     width: 80%;
     background-color: rgba(255, 255, 255, 0.329);
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
   }
+
+  .header_middle_div.show_menu {
+    display: flex;
+  }
+
   .header_middle_div.hide_menu {
     display: none;
   }
 
-  .header_middle_div.show_menu {
-    display: block;
-  }
-
   .header_middle_div ul {
     flex-direction: column;
-    gap: 2rem;
-  }
-
-  .header_btn_call span {
-    font-size: 1rem;
-    margin-right: 5px;
-    display: none;
-  }
-  .call_btn_header {
-    display: none;
-  }
-  .call_btn_header {
-    height: 10px;
-  }
-  .menu_toggle {
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .header_main_div {
-    padding: 0.5rem; /* Adjust padding for mobile */
-  }
-
-  .header_middle_div {
-    position: absolute;
-    right: 0px;
-    top: 70px;
-    height: 80vh;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.329);
-    display: none; /* Hide menu by default */
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .header_middle_div.show_menu {
-    display: flex; /* Show menu when toggle is active */
-  }
-
-  .header_middle_div ul {
-    flex-direction: column;
-    gap: 1.5rem; /* Reduced gap for mobile */
-  }
-
-  .header_btn_call span {
-    font-size: 1rem;
-    margin-right: 5px;
-    display: none;
-  }
-
-  .call_btn_header {
-    display: none;
+    gap: 1.5rem;
   }
 
   .menu_toggle {
-    display: block; /* Show the menu toggle button */
-    position: absolute;
-    right: 20px;
-    top: 12px;
-    border: none;
-    font-size: 25px;
+    display: block;
+    background-color: transparent;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .header_left_div {
-    gap: 0.5rem; /* Adjust gap for mobile */
+    gap: 0.5rem;
   }
 
   .header_logo {
-    height: 25px; /* Adjust logo size for mobile */
+    height: 25px;
   }
 
   .main_Logo {
-    height: 3rem; /* Adjust logo size for mobile */
+    height: 3rem;
     width: 3rem;
   }
 
   .logo_text {
-    width: 7vw; /* Adjust logo text width for mobile */
+    width: 40vw;
   }
 
   .toggle_theme_btn {
-    height: 1.5rem; /* Adjust button size */
+    height: 1.5rem;
     width: 1.5rem;
   }
 
-  .toggle_theme_btn img {
-    height: 100%;
-    width: 100%;
+  .mobile_view_only {
+    display: block;
   }
-  .logo_text {
-    height: 2.5rem;
-    width: 40vw;
+
+  .web_only_view {
+    display: none;
   }
+
+  .upper_header{
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-around;
+  }
+
+  .mobile_only_call_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .mobile_only_call_div span{
+    font-size: large;
+  }
+}
+
+.menu-item {
+  position: relative;
+}
+
+.submenu-item {
+  padding: 10px 16px;
+  color: #333;
+  font-size: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+
+.submenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  display: flex;
+  flex-direction: column !important;  /* 🔥 This makes it vertical */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  padding: 8px 0;
+  margin: 0;
+  border-radius: 6px;
+  z-index: 999;
+  list-style: none;
+}
+
+
+
+.submenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  display: flex;
+  flex-direction: column !important;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 0;            /* Initially collapsed */
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  z-index: 999;
+  list-style: none;
+  transition: max-width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.submenu.show {
+  max-width: 300px;       /* Adjust width as needed */
+  opacity: 1;
+  padding: 8px 0;
+}
+
+
+.menu-item{
+  display: flex;
 }

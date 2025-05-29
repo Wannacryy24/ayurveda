@@ -1,0 +1,42 @@
+.form_with_map {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; /* Optional: allows stacking on small screens */
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure each child takes 50% */
+.contact_form_div,
+.google_map {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Optional: make map take up proper height */
+.google_map {
+  position: relative;
+  
+}
+
+
+@media (max-width: 768px) {
+  .form_with_map{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    width: 100vw;
+  }
+
+  .form_with_map div{
+    width: 100%;
+  }
+
+  .google_map{
+    height: 80vh;
+  }
+
+  form{
+    width: 75vw;
+  }
+}
