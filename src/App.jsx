@@ -24,6 +24,10 @@ export default function App() {
         }/>
         {/* <Route path="/about/*" element={<AboutSection />} /> */}
         {/* <Route path="/committee" element={<CommitteeSection />} /> */}
+
+
+
+        
       </Routes>
       <Footer />
     </>
