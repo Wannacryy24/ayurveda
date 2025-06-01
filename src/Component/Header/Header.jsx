@@ -23,6 +23,7 @@ export default function Header() {
   }
 
   return (
+    <>
     <header className="header_main_div">
       <div className='mobile_view_only upper_header'>
         <SocialIcons/>
@@ -34,14 +35,14 @@ export default function Header() {
       <div className="header_main_inner_div">
         <div className="header_left_div"
           onClick={handleNavigateToHome}
-        >
+          >
 
           <img src="./veervedaLogo_Top.png" alt="" className="main_Logo" />
           <img src="./veervedaText.png" alt="" className="logo_text" />
         </div>
         <nav id="nav-menu" className={`header_middle_div ${isMenuOpen ? 'show_menu' : 'hide_menu'}`}
           onClick={()=>setIsMenuOpen(false)}
-        >
+          >
           <LiComponent headerList={headerList} />
         </nav>
         <div className="header_right_div">
@@ -56,12 +57,14 @@ export default function Header() {
               aria-expanded={isMenuOpen}
               onClick={handleToggle}
               className="menu-toggle-button"
-            >
+              >
               ☰
             </button>
           </div>
         </div>
       </div>
     </header>
+    <div style={{ height: '8rem' }} />
+              </>
   );
 }

@@ -8,6 +8,10 @@ import { imageData } from './Component/Carrousal/image';
 import FormWithMap from './Layout/FormWithMap'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ContactUs from './Pages/ContactUs/ContactUs';
+import Introduction from './Pages/Introduction/Introduction';
+import ComingSoon from './Pages/ComingSoon/ComingSoon';
+import OurMission from './Pages/OurMission/OurMission';
+import Director from './Pages/Director/Director';
 
 
 export default function App() {
@@ -37,12 +41,45 @@ export default function App() {
           </>
         }/>
 
+        <Route
+          path='/introduction'
+          element={
+            <>
+              <Introduction/>
+            </>
+          }
+        />
+
+        <Route
+          path='/our_mission'
+          element={
+            <OurMission/>
+          }
+        />
+
+          <Route
+          path='/director'
+          element={
+            <Director/>
+          }
+          />
+
+          
+        <Route
+          path='/events'
+          element={
+            <ComingSoon/>
+          }
+        />
+
         <Route 
           path= {'/contact_us'}
           element={
             <ContactUs/>
           }
           />
+
+        
       </Routes>
       <Footer />
     </>

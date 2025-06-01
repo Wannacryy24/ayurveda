@@ -1,0 +1,23 @@
+.our-mission-section {
+  background-color: #fdfaf6;
+  padding: 60px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.our-mission-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.our-mission-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2f5d3f;
+}
+
+.our-mission-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}

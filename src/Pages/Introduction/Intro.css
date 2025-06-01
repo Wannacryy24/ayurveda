@@ -1,0 +1,10 @@
+.introduction_page_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction_page_div img{
+    border-radius: 30px;
+}
