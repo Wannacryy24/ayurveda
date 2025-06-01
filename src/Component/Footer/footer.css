@@ -80,3 +80,106 @@ footer div p {
     line-height: 2rem;
   }
 }
+
+.footer_social_div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Platform colors */
+.social-icons a.twitter {
+  background-color: #e1f5fe;
+  color: #1da1f2;
+}
+
+.social-icons a.facebook {
+  background-color: #e3f2fd;
+  color: #4267b2;
+}
+
+.social-icons a.instagram {
+  background-color: #fce4ec;
+  color: #e4405f;
+}
+
+.social-icons a.email {
+  background-color: #fff9c4;
+  color: #f4b400;
+}
+
+.social-icons a:hover {
+  filter: brightness(0.85);
+}
+
+
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  width: auto; /* allow width to grow based on content */
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  justify-content: center;
+}
+
+/* Style for the text next to icon */
+.social-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit; /* inherit text color from link */
+}
+
+/* Platform colors */
+.social-icons a.twitter {
+  background-color: #e1f5fe;
+  color: #1da1f2;
+}
+
+.social-icons a.facebook {
+  background-color: #e3f2fd;
+  color: #4267b2;
+}
+
+.social-icons a.instagram {
+  background-color: #fce4ec;
+  color: #e4405f;
+}
+
+.social-icons a.email {
+  background-color: #fff9c4;
+  color: #f4b400;
+}
+
+.social-icons a:hover {
+  filter: brightness(0.85);
+}
+
+

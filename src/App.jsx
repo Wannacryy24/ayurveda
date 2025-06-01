@@ -7,6 +7,7 @@ import About from './Sections/About/About';
 import { imageData } from './Component/Carrousal/image';
 import FormWithMap from './Layout/FormWithMap'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ContactUs from './Pages/ContactUs/ContactUs';
 
 
 export default function App() {
@@ -14,7 +15,9 @@ export default function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={
+        <Route 
+        path= {'/'}
+        element={
           <>
             <Carrousal slides={imageData}/>
             <Hero />
@@ -22,12 +25,24 @@ export default function App() {
             <FormWithMap/>
           </>
         }/>
-        {/* <Route path="/about/*" element={<AboutSection />} /> */}
-        {/* <Route path="/committee" element={<CommitteeSection />} /> */}
 
+        <Route 
+        path= {'/Home'}
+        element={
+          <>
+            <Carrousal slides={imageData}/>
+            <Hero />
+            <About />
+            <FormWithMap/>
+          </>
+        }/>
 
-
-        
+        <Route 
+          path= {'/contact_us'}
+          element={
+            <ContactUs/>
+          }
+          />
       </Routes>
       <Footer />
     </>

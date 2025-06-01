@@ -1,3 +1,4 @@
+/* Visibility toggles */
 .mobile_view_only {
   display: none;
 }
@@ -6,13 +7,14 @@
   display: block;
 }
 
+/* Header general */
 .header_logo {
   height: 30px;
 }
 
 .header_main_div {
   box-sizing: border-box;
-  position: fixed;
+  min-height: 18vh;
   z-index: 1000;
   width: 100%;
   padding: 1rem;
@@ -43,6 +45,7 @@
   font-size: 25px;
 }
 
+/* Header Middle Nav */
 .header_middle_div ul {
   display: flex;
   flex-direction: row;
@@ -57,6 +60,7 @@
   transform: scale(1.2);
 }
 
+/* Header Left Logo */
 .header_left_div {
   height: 100%;
   width: fit-content;
@@ -77,6 +81,7 @@
   width: 10vw;
 }
 
+/* Header Right Icons and Buttons */
 .call_btn_header {
   height: 18px;
 }
@@ -158,10 +163,11 @@
   align-items: center;
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
   .header_main_div {
     padding: 0.5rem;
+    /* position: fixed; */
   }
 
   .header_middle_div {
@@ -190,12 +196,11 @@
   }
 
   .menu_toggle {
-    display: block;
+    display: flex;
     background-color: transparent;
     font-size: 2rem;
     justify-content: center;
     align-items: center;
-    display: flex;
   }
 
   .header_left_div {
@@ -228,54 +233,29 @@
     display: none;
   }
 
-  .upper_header{
+  .upper_header {
     display: flex;
     padding-bottom: 10px;
     justify-content: space-around;
   }
 
-  .mobile_only_call_div{
+  .mobile_only_call_div {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .mobile_only_call_div span{
+
+  .mobile_only_call_div span {
     font-size: large;
   }
 }
 
+/* Dropdown Menu */
 .menu-item {
   position: relative;
-}
-
-.submenu-item {
-  padding: 10px 16px;
-  color: #333;
-  font-size: 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-
-.submenu {
-  position: absolute;
-  top: 120%;
-  left: 0;
   display: flex;
-  flex-direction: column !important;  /* 🔥 This makes it vertical */
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 180px;
-  padding: 8px 0;
-  margin: 0;
-  border-radius: 6px;
-  z-index: 999;
-  list-style: none;
 }
-
-
 
 .submenu {
   position: absolute;
@@ -285,7 +265,7 @@
   flex-direction: column !important;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 0;            /* Initially collapsed */
+  max-width: 0;
   opacity: 0;
   overflow: hidden;
   padding: 0;
@@ -297,12 +277,92 @@
 }
 
 .submenu.show {
-  max-width: 300px;       /* Adjust width as needed */
+  max-width: 300px;
   opacity: 1;
   padding: 8px 0;
 }
 
+.submenu-item {
+  padding: 10px 16px;
+  color: #333;
+  font-size: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s;
+}
 
-.menu-item{
+/* Nav Menu (Mobile & Desktop) */
+#nav-menu {
   display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#nav-menu.hide_menu {
+  display: none;
+}
+
+#nav-menu.show_menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.888);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+  min-height: 50vh;
+  height: fit-content;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 769px) {
+  #nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+  }
+}
+
+/* Menu Toggle Button */
+.menu-toggle-button {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-toggle-button:hover {
+  color: rgb(3, 3, 102);
+}
+
+
+/* Default (desktop/web) — hide toggle button */
+.menu-toggle-button {
+  display: none;
+}
+
+/* Show toggle button only on small screens */
+@media (max-width: 768px) {
+  .menu-toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  .menu-toggle-button:hover {
+    color: rgb(3, 3, 102);
+  }
 }
