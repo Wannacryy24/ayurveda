@@ -379,7 +379,7 @@
 @media (max-width: 768px) {
   .header_main_div {
     padding: 0.5rem;
-    min-height: 15vh; /* Let content decide */
+    min-height: 18vh; /* Let content decide */
   }
 
   .header_main_inner_div {
