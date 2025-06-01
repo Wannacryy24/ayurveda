@@ -17,7 +17,7 @@ export default function ComingSoon() {
           Please check back shortly for a refreshed experience rooted in Ayurveda.
         </p>
         <a href="tel:+919410909079" className="coming-soon-button">
-          📞 +91 9410909079
+          📞 +91 9058809580
         </a>
       </div>
     </div>

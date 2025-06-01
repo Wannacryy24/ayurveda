@@ -2,7 +2,7 @@
 export const headerList = [
                         {section:'Home'},
                         {section:'Introduction'},
-                        {section:'Our Mission'},
+                        {section:'Updates'},// pdf , images
                         {section:'Director'},
                         {section:'Events'},
                         {section:'Contact Us'},

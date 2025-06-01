@@ -11,7 +11,8 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 import Introduction from './Pages/Introduction/Introduction';
 import ComingSoon from './Pages/ComingSoon/ComingSoon';
 import OurMission from './Pages/OurMission/OurMission';
-import Director from './Pages/Director/Director';
+import Updates from './Pages/Updates/Updates';
+import DirectorMessage from './Component/DirectorMessage/DirectorMessage';
 
 
 export default function App() {
@@ -19,33 +20,33 @@ export default function App() {
     <>
       <Header />
       <Routes>
-        <Route 
-        path= {'/'}
-        element={
-          <>
-            <Carrousal slides={imageData}/>
-            <Hero />
-            <About />
-            <FormWithMap/>
-          </>
-        }/>
+        <Route
+          path={'/'}
+          element={
+            <>
+              <Carrousal slides={imageData} />
+              <Hero />
+              <About />
+              <FormWithMap />
+            </>
+          } />
 
-        <Route 
-        path= {'/Home'}
-        element={
-          <>
-            <Carrousal slides={imageData}/>
-            <Hero />
-            <About />
-            <FormWithMap/>
-          </>
-        }/>
+        <Route
+          path={'/Home'}
+          element={
+            <>
+              <Carrousal slides={imageData} />
+              <Hero />
+              <About />
+              <FormWithMap />
+            </>
+          } />
 
         <Route
           path='/introduction'
           element={
             <>
-              <Introduction/>
+              <Introduction />
             </>
           }
         />
@@ -53,33 +54,40 @@ export default function App() {
         <Route
           path='/our_mission'
           element={
-            <OurMission/>
+            <OurMission />
           }
         />
 
-          <Route
+        <Route
+          path='updates'
+          element={
+            <Updates/>
+          }
+        />
+
+        <Route
           path='/director'
           element={
-            <Director/>
+            <DirectorMessage />
           }
-          />
+        />
 
-          
+
         <Route
           path='/events'
           element={
-            <ComingSoon/>
+            <ComingSoon />
           }
         />
 
-        <Route 
-          path= {'/contact_us'}
+        <Route
+          path={'/contact_us'}
           element={
-            <ContactUs/>
+            <ContactUs />
           }
-          />
+        />
 
-        
+
       </Routes>
       <Footer />
     </>

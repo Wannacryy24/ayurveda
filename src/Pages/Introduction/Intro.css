@@ -1,10 +1,113 @@
-.introduction_page_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.introduction_page_div {
+  max-width: 90vw;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2a3a1f;
+  background: #f9f9f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.introduction_page_div img{
-    border-radius: 30px;
+.intro-image-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro-image {
+  max-width: 100%;
+  height: 60vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.intro-text {
+  line-height: 1.65;
+  font-size: 18px;
+  font-weight: 400;
+  color: #3a4a20;
+}
+
+.intro-text p {
+  margin-bottom: 1.75rem;
+}
+
+.core-offerings h2,
+.vision-mission h2 {
+  color: #4a7c2a;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #a2c32d;
+  padding-bottom: 0.3rem;
+  max-width: fit-content;
+}
+
+.core-offerings ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.core-offerings ul li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5d23;
+}
+
+.core-offerings ul li::before {
+  content: '•';
+  color: #7daf3c;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.vision-mission p {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #375723;
+}
+
+@media (max-width: 768px) {
+  .intro-image {
+    height: 40vh;
+  }
+
+  .introduction_page_div {
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+  }
+
+  .core-offerings ul li {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+.core-offerings ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5d23;
+}
+
+.offering-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-top: 3px;
+  flex-shrink: 0;
 }

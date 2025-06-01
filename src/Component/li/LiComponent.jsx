@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 export default function LiComponent({ headerList = [] }) {
   const [hoveredSection, setHoveredSection] = useState(null);
+  const [activeSection, setActiveSection] = useState(null);
   const navigate = useNavigate();
+  
   const handleClick = (subItem) => {
     // Build the url like /about/xyz, where xyz is subItem
     const url = `/about/${subItem.toLowerCase()}`;
@@ -14,21 +16,24 @@ export default function LiComponent({ headerList = [] }) {
     text.toLowerCase().replace(/\s+/g, '_');
 
   const handleHeaderNavigation = (item) => {
-    navigate(`/${slugify(item.section)}`);
-  };
+  setActiveSection(item.section);
+  navigate(`/${slugify(item.section)}`);
+};
+
 
   return (
     <ul className="menu">
       {headerList.map((item) => (
         <li
           key={item.section}
-          className="menu-item"
+          className={`menu-item ${activeSection === item.section ? 'active' : ''}`}
           onMouseEnter={() => setHoveredSection(item.section)}
           onMouseLeave={() => setHoveredSection(null)}
-          onClick={()=>handleHeaderNavigation(item)}
+          onClick={() => handleHeaderNavigation(item)}
         >
           <span>{item.section} </span>
         </li>
+
       ))}
     </ul>
   );
