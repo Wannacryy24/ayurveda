@@ -4,13 +4,15 @@ import './Intro.css';
 
 export default function Introduction() {
   return (
+    <div className='Intro_Main_Div'>
+
     <section className="introduction_page_div">
       <figure className="intro-image-wrapper">
         <img
           src="/Lord_Dhanvantari.png"
           alt="Lord Dhanvantari"
           className="intro-image"
-        />
+          />
       </figure>
             <Hero />
       <article className="intro-text">
@@ -22,8 +24,8 @@ export default function Introduction() {
         src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png"
         alt="Wellness"
         className="offering-icon"
-      />
-      🧪 <strong>Ayurveda Wellness Solutions:</strong> Harness the power
+        />
+      <strong>Ayurveda Wellness Solutions:</strong> Harness the power
       of nature with our range of Ayurvedic products designed to boost
       immunity, enhance digestion, detoxify the body, improve mental
       well-being, and increase vitality. All our formulations are
@@ -35,8 +37,8 @@ export default function Introduction() {
         src="https://cdn-icons-png.flaticon.com/512/2920/2920236.png"
         alt="Manufacturing"
         className="offering-icon"
-      />
-      🏭 <strong>Manufacturing Excellence:</strong> Our ISO and
+        />
+       <strong>Manufacturing Excellence:</strong> Our ISO and
       GMP-certified facility ensures the highest standards of quality,
       safety, and consistency—from raw ingredients to finished
       products. Every batch is a promise of purity and potency.
@@ -46,8 +48,8 @@ export default function Introduction() {
         src="https://cdn-icons-png.flaticon.com/512/1534/1534006.png"
         alt="Events"
         className="offering-icon"
-      />
-      🧘‍♂️ <strong>Health & Sports Events:</strong> We promote active,
+        />
+       <strong>Health & Sports Events:</strong> We promote active,
       Ayurvedic lifestyles through marathons, yoga camps, wellness fairs,
       and fitness-centered events—connecting communities with mindful
       living.
@@ -57,8 +59,8 @@ export default function Introduction() {
         src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
         alt="Webinars"
         className="offering-icon"
-      />
-      🎓 <strong>Webinars, Seminars & Conferences:</strong> Join our
+        />
+       <strong>Webinars, Seminars & Conferences:</strong> Join our
       educational initiatives featuring Ayurvedic experts, wellness
       coaches, and health professionals. Our events foster awareness,
       dialogue, and deeper understanding of natural health practices.
@@ -68,8 +70,8 @@ export default function Introduction() {
         src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
         alt="Collaboration"
         className="offering-icon"
-      />
-      🤝 <strong>Collaborative Wellness Programs:</strong> Partnering
+        />
+      <strong>Collaborative Wellness Programs:</strong> Partnering
       with hospitals, corporates, and fitness centers, we deliver
       personalized Ayurvedic programs focused on stress relief,
       lifestyle disorder management, and performance optimization.
@@ -97,5 +99,6 @@ export default function Introduction() {
 
 
     </section>
+        </div>
   );
 }

@@ -16,10 +16,13 @@
 
 .intro-image {
   max-width: 100%;
-  height: 60vh;
-  object-fit: contain;
+  height: auto;          /* Let height adjust automatically */
+  object-fit: contain;   /* Maintain aspect ratio without cropping or stretching */
   border-radius: 16px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  display: block;        /* Removes unwanted space below image */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .intro-text {
@@ -51,7 +54,10 @@
 }
 
 .core-offerings ul li {
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.3rem;
   padding-left: 2rem;
   position: relative;
   font-size: 1rem;
@@ -70,6 +76,14 @@
   line-height: 1;
 }
 
+.offering-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
 .vision-mission p {
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -78,13 +92,25 @@
 }
 
 @media (max-width: 768px) {
-  .intro-image {
-    height: 40vh;
-  }
-
   .introduction_page_div {
+    max-width: 100vw; /* Use max-width instead of min-width */
     margin: 1.5rem 1rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Remove border from mobile if unwanted */
+  }
+
+  .intro-image-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .intro-image {
+    max-width: 90vw;
+    height: auto;           /* Maintain aspect ratio */
+    object-fit: contain;    /* Prevent distortion */
   }
 
   .core-offerings ul li {
@@ -93,21 +119,24 @@
   }
 }
 
-
-.core-offerings ul li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  margin-bottom: 1.3rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #4a5d23;
+.Intro_Main_Div {
+  width: 100vw;
+  /* Remove debug border if not needed */
+  /* border: 1px solid red; */
 }
 
-.offering-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  margin-top: 3px;
-  flex-shrink: 0;
+@media (max-width: 400px) {
+  .core-offerings ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.5rem;
+  }
+
+  .offering-icon {
+    margin-bottom: 0.3rem;
+  }
+
+  .core-offerings ul li::before {
+    display: none;  /* hide bullet if stacking */
+  }
 }
