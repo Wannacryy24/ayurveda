@@ -7,13 +7,20 @@ import Button from '../Button/Button';
 import { useState } from 'react';
 import { contactNumber } from '../../Data/contactNumber';
 import SocialIcons, { SocialIconsWeb } from '../SocialIcons/SocialIcons';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleToggle = () => {
     setIsMenuOpen((prev) => !prev);
+
   };
+
+  const handleNavigateToHome = () =>{
+    navigate('/home')
+  }
 
   return (
     <header className="header_main_div">
@@ -25,11 +32,16 @@ export default function Header() {
         </div>
       </div>
       <div className="header_main_inner_div">
-        <div className="header_left_div">
+        <div className="header_left_div"
+          onClick={handleNavigateToHome}
+        >
+
           <img src="./veervedaLogo_Top.png" alt="" className="main_Logo" />
           <img src="./veervedaText.png" alt="" className="logo_text" />
         </div>
-        <nav id="nav-menu" className={`header_middle_div ${isMenuOpen ? 'show_menu' : 'hide_menu'}`}>
+        <nav id="nav-menu" className={`header_middle_div ${isMenuOpen ? 'show_menu' : 'hide_menu'}`}
+          onClick={()=>setIsMenuOpen(false)}
+        >
           <LiComponent headerList={headerList} />
         </nav>
         <div className="header_right_div">

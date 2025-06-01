@@ -73,7 +73,7 @@
 @media (max-width: 768px) {
   .carousel {
     height: 40vh;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
   }
 
   .carousel-button {
@@ -94,7 +94,7 @@
 
 @media (max-width: 480px) {
   .carousel {
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
     height: 35vh;
   }
 
