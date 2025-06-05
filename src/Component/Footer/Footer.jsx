@@ -1,38 +1,75 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './footer.css';
 import SocialSectionFooter from './SocialSectionFooter';
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer">
       <div className="footer_left_div">
-        <h3>About Us</h3>
-        <p>
+        <div
+          style={{
+            height:'150px',
+            width:'200px',
+            boxSizing:'border-box',
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center'
+          }}
+          >
+          <img src="vv.png"
+          className='vv_footer_img'
+          alt="" 
+            style={{
+              height:'300px',
+              width:'300px'
+            }}
+          />
+        </div>
+        <p
+        >
           Veerveda Arogya Life empowers wellness through Ayurveda, herbal innovation, and nationwide
           healthcare initiatives.
         </p>
       </div>
 
-      <div className="footer_middle_div">
-        <img src="./leaf_footer.png" alt="Leaf Footer" />
-        <h3>Quick Links</h3>
-        <p>Home</p>
-        <p>About</p>
-      </div>
-
-      <div className="footer_right_div">
-        <h3>Contact Info</h3>
-        <p>📞 +91 9058809580 </p>
-        <p>✉️ veerveda10125@gmail.com</p>
-        <div>
-          <p>🏠 Anmol Vihar Paper Mill Road </p>
-          <p>Saharanpur (247001) </p>
-          <p>UP, India</p>
+      <div className='footer_details'>
+        <div className="footer_middle_div">
+            <h3>Menu</h3>
+            <div className='footer_middle_div_inside_div'>
+              <p
+                onClick={()=>navigate('/home')}
+              >Home</p>
+              <p
+                onClick={()=>navigate('/introduction')}
+              >Introduction</p>
+              <p
+                onClick={()=>navigate('/updates')}
+              >Updates</p>
+              <p
+                onClick={()=>navigate('/director')}
+              >Director</p>
+              <p
+                onClick={()=>navigate('/events')}
+              >Events</p>
+              <p
+                onClick={()=>navigate('contact_us')}
+              >Contact Us</p>
+            </div>
         </div>
+        <div className="footer_right_div">
+          <h3>Contact Info</h3>
+          <p>📞 +91 9058809580 </p>
+          <p>✉️ veerveda10125@gmail.com</p>
+          <div>
+            <p>🏠 Anmol Vihar Paper Mill Road </p>
+            <p>Saharanpur (247001) </p>
+            <p>UP, India</p>
+          </div>
+        </div>
+        <SocialSectionFooter />
       </div>
-
-      {/* Social Section */}
-      <SocialSectionFooter/>
 
     </footer>
   );

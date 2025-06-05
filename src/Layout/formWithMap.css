@@ -24,8 +24,9 @@
   .form_with_map{
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
+    padding: 0 10px 50px 10px;
     width: 100vw;
+
   }
 
   .form_with_map div{

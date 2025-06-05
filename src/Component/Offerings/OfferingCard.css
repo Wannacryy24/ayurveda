@@ -1,0 +1,35 @@
+.offering-card {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.offering-card:hover {
+  transform: translateY(-6px);
+}
+
+.offering-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.offering-card-content {
+  padding: 1.2rem;
+}
+
+.offering-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.offering-card-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}

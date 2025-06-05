@@ -6,7 +6,12 @@ export default function Hero() {
     <div className="hero">
       <div className="hero_inner_right_div">
         <div className="hero_image_main_div">
-          <img src="./V.png" alt="" />
+          <img src="./vv.png" alt="" className='company_logo_hero' 
+              style={{
+                height:'400px',
+                widows:'400px'
+            }}
+          />
           <div className="hero_h1_div">
             <h1>Welcome to </h1>
             <h1>Veerveda Arogya</h1>

@@ -87,4 +87,17 @@
   .hero_image_main_div img {
     height: 12rem;
   }
+
+}
+
+
+@media (max-width: 768px) {
+  .hero_img {
+    display: none;
+  }
+
+  .company_logo_hero {
+    height: 200px !important;
+    /* display: none; */
+  }
 }

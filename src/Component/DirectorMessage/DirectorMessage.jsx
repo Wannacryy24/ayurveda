@@ -11,7 +11,6 @@ const testimonials = [
   },
   {
     name: 'Dr. Vivek Sagar, Director',
-    heading: 'Our Vision',
     message:
       'To become a leading name in holistic wellness by offering trusted, natural, and innovative Ayurvedic solutions that restore harmony to mind, body, and spirit. We envision a healthier world where ancient Indian wellness wisdom meets modern lifestyles — empowering people to live more consciously and vibrantly.',
     imageSrc: 'Vivek.png',
@@ -21,6 +20,14 @@ const TestimonialMessage = () => {
   return (
     <section className="testimonial-section">
       <div className="testimonial-container">
+        <h1
+          style={{
+            width:'100vw',
+            display:'flex',
+            justifyContent:'center',
+            alignContent:'center'
+          }}
+        >Director Message</h1>
         {testimonials.map((testimonial, index) => {
           const isImageRight = index % 2 === 0; // ✅ First = right, Second = left
           return (

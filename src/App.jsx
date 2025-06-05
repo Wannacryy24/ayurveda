@@ -13,11 +13,13 @@ import ComingSoon from './Pages/ComingSoon/ComingSoon';
 import OurMission from './Pages/OurMission/OurMission';
 import Updates from './Pages/Updates/Updates';
 import DirectorMessage from './Component/DirectorMessage/DirectorMessage';
+import ScrollToTop from './Component/Common/ScrollTop';
 
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route
@@ -86,8 +88,6 @@ export default function App() {
             <ContactUs />
           }
         />
-
-
       </Routes>
       <Footer />
     </>
