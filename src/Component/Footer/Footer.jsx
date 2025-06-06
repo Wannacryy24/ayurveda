@@ -8,55 +8,30 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer_left_div">
-        <div
-          style={{
-            height:'150px',
-            width:'200px',
-            boxSizing:'border-box',
-            display:'flex',
-            justifyContent:'center',
-            alignItems:'center'
-          }}
-          >
-          <img src="vv.png"
-          className='vv_footer_img'
-          alt="" 
-            style={{
-              height:'300px',
-              width:'300px'
-            }}
+        <div className="footer_logo_container">
+          <img
+            src="vv.png"
+            className="vv_footer_img"
+            alt="Veerveda Logo"
           />
         </div>
-        <p
-        >
+        <p>
           Veerveda Arogya Life empowers wellness through Ayurveda, herbal innovation, and nationwide
           healthcare initiatives.
         </p>
       </div>
 
-      <div className='footer_details'>
+      <div className="footer_details">
         <div className="footer_middle_div">
-            <h3>Menu</h3>
-            <div className='footer_middle_div_inside_div'>
-              <p
-                onClick={()=>navigate('/home')}
-              >Home</p>
-              <p
-                onClick={()=>navigate('/introduction')}
-              >Introduction</p>
-              <p
-                onClick={()=>navigate('/updates')}
-              >Updates</p>
-              <p
-                onClick={()=>navigate('/director')}
-              >Director</p>
-              <p
-                onClick={()=>navigate('/events')}
-              >Events</p>
-              <p
-                onClick={()=>navigate('contact_us')}
-              >Contact Us</p>
-            </div>
+          <h3>Menu</h3>
+          <div className="footer_middle_div_inside_div">
+            <p onClick={() => navigate('/home')}>Home</p>
+            <p onClick={() => navigate('/introduction')}>Introduction</p>
+            <p onClick={() => navigate('/updates')}>Updates</p>
+            <p onClick={() => navigate('/director')}>Director</p>
+            <p onClick={() => navigate('/events')}>Events</p>
+            <p onClick={() => navigate('/contact_us')}>Contact Us</p>
+          </div>
         </div>
         <div className="footer_right_div">
           <h3>Contact Info</h3>
@@ -70,7 +45,6 @@ export default function Footer() {
         </div>
         <SocialSectionFooter />
       </div>
-
     </footer>
   );
 }

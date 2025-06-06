@@ -1,0 +1,34 @@
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.menu-item.active {
+  color: #4caf50;
+}
+
+/* Icon hidden by default (desktop) */
+.mobile-only-icon {
+  display: none;
+}
+
+/* Icons shown only in mobile */
+@media (max-width: 768px) {
+  .mobile-only-icon {
+    display: inline-block;
+    font-size: 1rem;
+  }
+}

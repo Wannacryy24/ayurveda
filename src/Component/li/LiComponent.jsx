@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './LiComponent.css';
 
-export default function LiComponent({ headerList = [] }) {
-  const [hoveredSection, setHoveredSection] = useState(null);
-  const [activeSection, setActiveSection] = useState(null);
+import { FaHome, FaUser, FaCalendar, FaPhone, FaBook, FaStickyNote } from 'react-icons/fa';
+
+export default function LiComponent({ headerList = [], activeSection, setActiveSection }) {
   const navigate = useNavigate();
-  
-  const handleClick = (subItem) => {
-    // Build the url like /about/xyz, where xyz is subItem
-    const url = `/about/${subItem.toLowerCase()}`;
-    navigate(url);
-  };
 
-  const slugify = (text) =>
-    text.toLowerCase().replace(/\s+/g, '_');
+  const slugify = (text) => text.toLowerCase().replace(/\s+/g, '_');
 
   const handleHeaderNavigation = (item) => {
-  setActiveSection(item.section);
-  navigate(`/${slugify(item.section)}`);
-};
+    setActiveSection(item.section);
+    navigate(`/${slugify(item.section)}`);
+  };
 
+  const getIcon = (section) => {
+    const icons = {
+      Home: <FaHome />,
+      Introduction: <FaBook />,
+      Updates: <FaStickyNote />,
+      Director: <FaUser />,
+      Events: <FaCalendar />,
+      'Contact Us': <FaPhone />,
+    };
+    return icons[section] || null;
+  };
 
   return (
     <ul className="menu">
@@ -27,28 +32,12 @@ export default function LiComponent({ headerList = [] }) {
         <li
           key={item.section}
           className={`menu-item ${activeSection === item.section ? 'active' : ''}`}
-          onMouseEnter={() => setHoveredSection(item.section)}
-          onMouseLeave={() => setHoveredSection(null)}
           onClick={() => handleHeaderNavigation(item)}
         >
-          <span>{item.section} </span>
+          <span className="mobile-only-icon">{getIcon(item.section)}</span>
+          <span>{item.section}</span>
         </li>
-
       ))}
     </ul>
   );
 }
-
-
-// {item.innerData && (<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z" /></svg>)}
-//           {item.innerData && (
-//             <ul className={`submenu ${hoveredSection === item.section ? 'show' : ''}`}>
-//               {item.innerData.map((subItem) => (
-//                 <li key={subItem} className="submenu-item"
-//                   onClick={() => handleClick(subItem)}
-//                 >
-//                   {subItem}
-//                 </li>
-//               ))}
-//             </ul>
-//           )}
