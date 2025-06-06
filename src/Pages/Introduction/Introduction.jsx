@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../../Component/Hero/Hero';
 import './Intro.css';
 import OfferingCard from '../../Component/Offerings/OfferingCard';
+import OurVision from '../../Component/OurVision/OurVision';
 
 export default function Introduction() {
   return (
@@ -16,25 +17,9 @@ export default function Introduction() {
         </figure>
         <Hero />
         <article className="intro-text">
-          <OfferingCard/>
-          <section className="vision-mission">
-            <h2>Our Vision</h2>
-            <p>
-              🌍 To become a global leader in Ayurveda-driven wellness, building a
-              healthier world through nature-powered, accessible, and
-              evidence-based solutions.
-            </p>
-
-            <h2>Our Mission</h2>
-            <p>
-              🎯 To empower individuals to take charge of their well-being by
-              offering authentic Ayurvedic products, services, and
-              experiences—sustainably and ethically.
-            </p>
-          </section>
+          <OfferingCard/>  
         </article>
-
-
+        <OurVision/>
       </section>
     </div>
   );

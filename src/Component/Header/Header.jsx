@@ -14,7 +14,6 @@ export default function Header() {
 
   const handleToggle = () => {
     setIsMenuOpen((prev) => !prev);
-
   };
 
   const handleNavigateToHome = () => {
