@@ -112,7 +112,7 @@
 /* 📱 Mobile view (responsive layout) */
 @media (max-width: 768px) {
   .carousel-container {
-    height: 30vh;
+    height: 20vh;
     margin: 1rem 0;
     perspective: 800px;
   }
@@ -161,6 +161,40 @@
   .dot {
     width: 10px;
     height: 10px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 30vh; /* Increased from 20vh for better centering */
+    margin: 1rem 0;
+    perspective: 800px;
+  }
+
+  .carousel-arrow {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+    top: 50%;                        /* Ensure it remains centered */
+    transform: translateY(-50%);
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 30vh; /* Increased from 20vh for better centering */
+    margin: 1rem 0;
+    perspective: 800px;
+  }
+
+  .carousel-arrow {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+    top: 50%;                        /* Ensure it remains centered */
+    transform: translateY(-50%);
   }
 }
 

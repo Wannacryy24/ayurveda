@@ -39,7 +39,7 @@ export default function App() {
           path={'/Home'}
           element={
             <>
-              <Carrousal slides={imageData} />
+              <Carousel3D images={imageData}/>
               <Hero />
               <About />
               <FormWithMap />
