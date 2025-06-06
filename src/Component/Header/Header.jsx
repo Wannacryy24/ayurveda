@@ -28,7 +28,7 @@ export default function Header() {
           <SocialIcons />
           <div className='mobile_only_call_div'>
             <img src="./phone.png" alt="" className="call_btn_header" />
-            <span>+91 9410909079 </span>
+            <span>+91 9058809580 </span>
           </div>
         </div>
         <div className="header_main_inner_div">
