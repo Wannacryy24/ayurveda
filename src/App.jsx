@@ -14,6 +14,7 @@ import OurMission from './Pages/OurMission/OurMission';
 import Updates from './Pages/Updates/Updates';
 import DirectorMessage from './Component/DirectorMessage/DirectorMessage';
 import ScrollToTop from './Component/Common/ScrollTop';
+import Carousel3D from './Component/Carousel3D/Carousel3D';
 
 
 export default function App() {
@@ -26,7 +27,8 @@ export default function App() {
           path={'/'}
           element={
             <>
-              <Carrousal slides={imageData} />
+              {/* <Carrousal slides={imageData} /> */}
+              <Carousel3D images={imageData}/>
               <Hero />
               <About />
               <FormWithMap />
